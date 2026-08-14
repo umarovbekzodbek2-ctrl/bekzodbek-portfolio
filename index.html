@@ -1,640 +1,241 @@
+<!DOCTYPE html>
 <html lang="uz">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Umarov Bekzodbek | Portfolio</title>
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior:smooth;
-}
-
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
 :root{
     --blue:#0757d9;
     --blue2:#00a8ff;
     --dark:#0b1630;
     --text:#263247;
+    --muted:#68788e;
     --light:#f4f8ff;
-    --white:#ffffff;
+    --white:#fff;
 }
-
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:var(--light);
-    color:var(--text);
-    overflow-x:hidden;
-}
-
-a{
-    text-decoration:none;
-}
+body{font-family:Arial,Helvetica,sans-serif;background:var(--light);color:var(--text);overflow-x:hidden}
+a{text-decoration:none}
 
 header{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    z-index:1000;
-    padding:18px 7%;
-    background:rgba(7,87,217,.92);
-    backdrop-filter:blur(15px);
-    box-shadow:0 5px 25px rgba(0,0,0,.12);
+    position:fixed;top:0;left:0;width:100%;z-index:1000;
+    padding:18px 7%;background:rgba(7,87,217,.95);
+    backdrop-filter:blur(15px);box-shadow:0 5px 25px rgba(0,0,0,.12)
 }
+nav{max-width:1250px;margin:auto;display:flex;justify-content:space-between;align-items:center}
+.logo{color:#fff;font-size:24px;font-weight:800;letter-spacing:.5px}
+.logo span{color:#8ee7ff}
+nav ul{display:flex;gap:25px;list-style:none}
+nav ul li a{color:#fff;font-weight:600;font-size:15px;transition:.3s}
+nav ul li a:hover{color:#8ee7ff}
 
-nav{
-    max-width:1250px;
-    margin:auto;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
+section{padding:100px 7%}
+.container{max-width:1250px;margin:auto}
+.section-title{text-align:center;margin-bottom:55px}
+.section-title h2{font-size:40px;color:var(--dark);margin-bottom:12px}
+.section-title span{color:var(--blue)}
+.section-title p{color:#718096;font-size:17px}
 
-.logo{
-    color:white;
-    font-size:24px;
-    font-weight:800;
-    letter-spacing:.5px;
-}
-
-.logo span{
-    color:#8ee7ff;
-}
-
-nav ul{
-    display:flex;
-    gap:25px;
-    list-style:none;
-}
-
-nav ul li a{
-    color:white;
-    font-weight:600;
-    font-size:15px;
-    transition:.3s;
-}
-
-nav ul li a:hover{
-    color:#8ee7ff;
-}
-
-/* HERO */
-
+/* BOSH SAHIFA */
 .hero{
-    min-height:100vh;
-    padding:140px 7% 80px;
+    min-height:100vh;padding:140px 7% 80px;
     background:
-        radial-gradient(circle at 10% 20%,rgba(0,168,255,.18),transparent 30%),
-        radial-gradient(circle at 90% 80%,rgba(7,87,217,.18),transparent 30%),
-        linear-gradient(135deg,#eef7ff,#ffffff);
-    display:flex;
-    align-items:center;
+      radial-gradient(circle at 10% 20%,rgba(0,168,255,.18),transparent 30%),
+      radial-gradient(circle at 90% 80%,rgba(7,87,217,.18),transparent 30%),
+      linear-gradient(135deg,#eef7ff,#fff);
+    display:flex;align-items:center
 }
-
 .hero-container{
-    max-width:1250px;
-    width:100%;
-    margin:auto;
-    display:grid;
-    grid-template-columns:1.15fr .85fr;
-    gap:70px;
-    align-items:center;
+    max-width:1250px;width:100%;margin:auto;
+    display:grid;grid-template-columns:1.15fr .85fr;gap:70px;align-items:center
 }
-
-.hero-text{
-    animation:fadeLeft 1s ease;
-}
-
+.hero-text{animation:fadeLeft 1s ease}
 .badge{
-    display:inline-block;
-    padding:10px 18px;
-    background:#e5f2ff;
-    color:var(--blue);
-    border-radius:30px;
-    font-weight:700;
-    margin-bottom:22px;
+    display:inline-block;padding:10px 18px;background:#e5f2ff;color:var(--blue);
+    border-radius:30px;font-weight:700;margin-bottom:22px
 }
-
-.hero h1{
-    font-size:64px;
-    line-height:1.05;
-    color:var(--dark);
-    margin-bottom:20px;
-}
-
-.hero h1 span{
-    color:var(--blue);
-}
-
-.hero h2{
-    font-size:25px;
-    line-height:1.4;
-    margin-bottom:22px;
-}
-
-.hero p{
-    max-width:700px;
-    color:#607089;
-    font-size:18px;
-    line-height:1.8;
-}
-
-.buttons{
-    display:flex;
-    gap:15px;
-    margin-top:32px;
-    flex-wrap:wrap;
-}
-
-.btn{
-    display:inline-block;
-    padding:15px 27px;
-    border-radius:35px;
-    font-weight:700;
-    transition:.3s;
-}
-
+.hero h1{font-size:64px;line-height:1.05;color:var(--dark);margin-bottom:20px}
+.hero h1 span{color:var(--blue)}
+.hero h2{font-size:25px;line-height:1.4;margin-bottom:22px}
+.hero p{max-width:700px;color:#607089;font-size:18px;line-height:1.8}
+.buttons{display:flex;gap:15px;margin-top:32px;flex-wrap:wrap}
+.btn{display:inline-block;padding:15px 27px;border-radius:35px;font-weight:700;transition:.3s}
 .btn-primary{
-    color:white;
-    background:linear-gradient(135deg,var(--blue),var(--blue2));
-    box-shadow:0 10px 25px rgba(7,87,217,.25);
+    color:#fff;background:linear-gradient(135deg,var(--blue),var(--blue2));
+    box-shadow:0 10px 25px rgba(7,87,217,.25)
 }
+.btn-primary:hover,.btn-light:hover{transform:translateY(-4px)}
+.btn-light{color:var(--blue);background:#fff;border:1px solid #d7e6f8}
 
-.btn-primary:hover{
-    transform:translateY(-4px);
-    box-shadow:0 15px 30px rgba(7,87,217,.35);
-}
-
-.btn-light{
-    color:var(--blue);
-    background:white;
-    border:1px solid #d7e6f8;
-}
-
-.btn-light:hover{
-    transform:translateY(-4px);
-}
-
-/* PHOTO */
-
-.hero-photo{
-    display:flex;
-    justify-content:center;
-    animation:fadeRight 1s ease;
-}
-
+.hero-photo{display:flex;justify-content:center;animation:fadeRight 1s ease}
 .photo-card{
-    position:relative;
-    width:390px;
-    padding:12px;
-    border-radius:35px;
+    position:relative;width:390px;padding:12px;border-radius:35px;
     background:linear-gradient(135deg,#0757d9,#00c6ff);
-    box-shadow:0 30px 70px rgba(7,87,217,.28);
-    transform:rotate(2deg);
+    box-shadow:0 30px 70px rgba(7,87,217,.28);transform:rotate(2deg)
 }
-
 .photo-card img{
-    display:block;
-    width:100%;
-    height:510px;
-    object-fit:cover;
-    object-position:center top;
-    border-radius:27px;
-    background:white;
-    transform:rotate(-2deg);
+    display:block;width:100%;height:510px;object-fit:cover;object-position:center top;
+    border-radius:27px;background:#fff;transform:rotate(-2deg)
 }
-
 .photo-label{
-    position:absolute;
-    bottom:28px;
-    left:30px;
-    right:30px;
-    padding:15px;
-    border-radius:15px;
-    background:rgba(255,255,255,.92);
-    backdrop-filter:blur(10px);
-    text-align:center;
-    font-weight:800;
-    color:var(--dark);
+    position:absolute;bottom:28px;left:30px;right:30px;padding:15px;border-radius:15px;
+    background:rgba(255,255,255,.92);backdrop-filter:blur(10px);
+    text-align:center;font-weight:800;color:var(--dark)
 }
 
-/* SECTIONS */
-
-section{
-    padding:100px 7%;
-}
-
-.container{
-    max-width:1250px;
-    margin:auto;
-}
-
-.section-title{
-    text-align:center;
-    margin-bottom:55px;
-}
-
-.section-title span{
-    color:var(--blue);
-}
-
-.section-title h2{
-    font-size:40px;
-    color:var(--dark);
-    margin-bottom:12px;
-}
-
-.section-title p{
-    color:#718096;
-    font-size:17px;
-}
-
-/* ABOUT */
-
-.about{
-    background:white;
-}
-
-.about-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:50px;
-    align-items:center;
-}
-
+/* MEN HAQIMDA */
+.about{background:#fff}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
 .about-box{
-    padding:35px;
-    border-radius:25px;
-    background:linear-gradient(135deg,#f3f8ff,#ffffff);
-    border:1px solid #e1ecfa;
+    padding:35px;border-radius:25px;background:linear-gradient(135deg,#f3f8ff,#fff);
+    border:1px solid #e1ecfa
 }
-
-.about-box h3{
-    font-size:27px;
-    color:var(--dark);
-    margin-bottom:20px;
-}
-
-.about-box p{
-    line-height:1.8;
-    color:#637189;
-    font-size:17px;
-}
-
-.info-list{
-    display:grid;
-    gap:15px;
-}
-
+.about-box h3{font-size:27px;color:var(--dark);margin-bottom:20px}
+.about-box p{line-height:1.8;color:#637189;font-size:17px}
+.info-list{display:grid;gap:15px}
 .info{
-    padding:18px 20px;
-    background:white;
-    border-radius:15px;
-    box-shadow:0 8px 25px rgba(25,70,120,.07);
+    padding:18px 20px;background:#fff;border-radius:15px;
+    box-shadow:0 8px 25px rgba(25,70,120,.07)
 }
+.info strong{display:block;color:var(--blue);margin-bottom:5px}
+.info span,.info small{color:#5f6f85;display:block;line-height:1.5}
 
-.info strong{
-    display:block;
-    color:var(--blue);
-    margin-bottom:5px;
-}
-
-.info span{
-    color:#5f6f85;
-}
-
-/* STATS */
-
+/* STATISTIKA */
 .stats{
-    background:linear-gradient(135deg,#0757d9,#00a8ff);
-    color:white;
+    position:relative;overflow:hidden;
+    background:linear-gradient(135deg,#0757d9,#00a8ff);color:#fff
 }
-
-.stats .section-title h2,
-.stats .section-title p{
-    color:white;
+.stats:before,.stats:after{
+    content:"";position:absolute;border-radius:50%;pointer-events:none
 }
-
-.stats-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:22px;
-}
-
+.stats:before{width:400px;height:400px;top:-180px;left:-100px;background:rgba(255,255,255,.08)}
+.stats:after{width:350px;height:350px;bottom:-180px;right:-80px;background:rgba(255,255,255,.07)}
+.stats .container{position:relative;z-index:2}
+.stats .section-title h2,.stats .section-title p{color:#fff}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
 .stat{
-    padding:35px 20px;
-    text-align:center;
-    border-radius:22px;
-    background:rgba(255,255,255,.13);
-    border:1px solid rgba(255,255,255,.2);
-    backdrop-filter:blur(10px);
-    transition:.3s;
+    padding:30px 20px;text-align:center;border-radius:22px;
+    background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.2);
+    backdrop-filter:blur(10px);transition:.3s
 }
-
-.stat:hover{
-    transform:translateY(-8px);
-    background:rgba(255,255,255,.2);
+.stat:hover{transform:translateY(-8px);background:rgba(255,255,255,.2)}
+.stat-icon{
+    width:58px;height:58px;margin:0 auto 18px;display:flex;align-items:center;
+    justify-content:center;background:rgba(255,255,255,.16);
+    border:1px solid rgba(255,255,255,.25);border-radius:18px;font-size:27px
 }
+.stat h3{font-size:42px;margin-bottom:10px;font-weight:800}
+.stat p{font-size:16px;opacity:.9}
 
-.stat h3{
-    font-size:42px;
-    margin-bottom:10px;
+/* FAOLIYAT */
+.activity{background:#f7faff}
+.main-mission{
+    display:flex;align-items:center;gap:25px;padding:35px 40px;margin-bottom:45px;
+    border-radius:25px;background:linear-gradient(135deg,#0757d9,#00a8ff);
+    color:#fff;box-shadow:0 20px 50px rgba(7,87,217,.22);
+    position:relative;overflow:hidden
 }
-
-.stat p{
-    font-size:16px;
-    opacity:.9;
+.main-mission:after{
+    content:"";position:absolute;width:250px;height:250px;border-radius:50%;
+    background:rgba(255,255,255,.08);right:-80px;top:-100px
 }
-
-/* ACTIVITY */
-
-.activity{
-    background:#f7faff;
+.mission-icon{
+    min-width:70px;height:70px;display:flex;align-items:center;justify-content:center;
+    background:rgba(255,255,255,.15);border-radius:20px;font-size:34px
 }
+.mission-label{font-size:12px;font-weight:800;letter-spacing:2px;opacity:.8;margin-bottom:10px}
+.main-mission h3{font-size:21px;line-height:1.6;font-weight:600;max-width:950px}
 
-.cards{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:25px;
+.direction-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.direction-card{
+    background:#fff;padding:30px;border-radius:22px;border:1px solid #e2eaf5;
+    box-shadow:0 10px 30px rgba(30,70,120,.07);transition:.35s
 }
-
-.card{
-    background:white;
-    padding:32px;
-    border-radius:22px;
-    border:1px solid #e5edf7;
-    box-shadow:0 10px 35px rgba(30,75,130,.07);
-    transition:.35s;
+.direction-card:hover{transform:translateY(-8px);box-shadow:0 20px 40px rgba(30,70,120,.14)}
+.direction-icon{
+    width:58px;height:58px;display:flex;align-items:center;justify-content:center;
+    border-radius:17px;background:#edf6ff;font-size:28px;margin-bottom:20px
 }
+.direction-card h3{font-size:19px;color:#15233e;margin-bottom:12px}
+.direction-card p{color:#68788e;font-size:14px;line-height:1.7}
 
-.card:hover{
-    transform:translateY(-9px);
-    box-shadow:0 20px 45px rgba(30,75,130,.13);
-}
-
-.icon{
-    width:58px;
-    height:58px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:17px;
-    background:#e8f3ff;
-    font-size:27px;
-    margin-bottom:20px;
-}
-
-.card h3{
-    color:var(--dark);
-    margin-bottom:13px;
-    font-size:21px;
-}
-
-.card p{
-    color:#69788d;
-    line-height:1.7;
-}
-
-/* ACHIEVEMENTS */
-
-.achievements{
-    background:white;
-}
-
+/* YUTUQLAR */
+.achievements{background:#fff}
 .achievement{
-    display:flex;
-    gap:20px;
-    align-items:flex-start;
-    padding:25px;
-    margin-bottom:18px;
-    border-radius:18px;
-    background:#f7faff;
-    border-left:5px solid var(--blue);
+    display:flex;gap:20px;align-items:flex-start;padding:25px;margin-bottom:18px;
+    border-radius:18px;background:#f7faff;border-left:5px solid var(--blue)
 }
-
 .achievement-number{
-    min-width:48px;
-    height:48px;
-    border-radius:50%;
-    background:var(--blue);
-    color:white;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-weight:800;
+    min-width:48px;height:48px;border-radius:50%;background:var(--blue);color:#fff;
+    display:flex;align-items:center;justify-content:center;font-weight:800
 }
+.achievement h3{margin-bottom:8px;color:var(--dark)}
+.achievement p{color:#68788d;line-height:1.6}
 
-.achievement h3{
-    margin-bottom:8px;
-    color:var(--dark);
-}
-
-.achievement p{
-    color:#68788d;
-    line-height:1.6;
-}
-
-/* GALLERY */
-
-.gallery{
-    background:#f7faff;
-}
-
-.gallery-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-}
-
+/* FOTOALBOM */
+.gallery{background:#f7faff}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .gallery-item{
-    height:250px;
-    overflow:hidden;
-    border-radius:20px;
+    height:250px;overflow:hidden;border-radius:20px;
     background:linear-gradient(135deg,#0757d9,#00a8ff);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:white;
-    font-size:20px;
-    font-weight:700;
+    display:flex;align-items:center;justify-content:center;color:#fff;
+    font-size:20px;font-weight:700
 }
+.gallery-item img{width:100%;height:100%;object-fit:cover;transition:.5s}
+.gallery-item:hover img{transform:scale(1.08)}
 
-.gallery-item img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    transition:.5s;
-}
-
-.gallery-item:hover img{
-    transform:scale(1.08);
-}
-
-/* CONTACT */
-
-.contact{
-    background:linear-gradient(135deg,#0b1630,#0757d9);
-    color:white;
-    text-align:center;
-}
-
-.contact .section-title h2,
-.contact .section-title p{
-    color:white;
-}
-
-.contact-box{
-    max-width:700px;
-    margin:auto;
-    display:grid;
-    gap:15px;
-}
-
+/* BOG'LANISH */
+.contact{background:linear-gradient(135deg,#0b1630,#0757d9);color:#fff;text-align:center}
+.contact .section-title h2,.contact .section-title p{color:#fff}
+.contact-box{max-width:700px;margin:auto;display:grid;gap:15px}
 .contact-item{
-    padding:20px;
-    background:rgba(255,255,255,.1);
-    border-radius:15px;
-    backdrop-filter:blur(10px);
+    padding:20px;background:rgba(255,255,255,.1);border-radius:15px;
+    backdrop-filter:blur(10px)
 }
+footer{background:#071024;color:#aebbd0;text-align:center;padding:28px;font-size:14px}
 
-/* FOOTER */
-
-footer{
-    background:#071024;
-    color:#aebbd0;
-    text-align:center;
-    padding:28px;
-    font-size:14px;
-}
-
-/* ANIMATION */
-
+/* ANIMATSIYA */
 @keyframes fadeLeft{
-    from{
-        opacity:0;
-        transform:translateX(-40px);
-    }
-    to{
-        opacity:1;
-        transform:translateX(0);
-    }
+    from{opacity:0;transform:translateX(-40px)}
+    to{opacity:1;transform:translateX(0)}
 }
-
 @keyframes fadeRight{
-    from{
-        opacity:0;
-        transform:translateX(40px);
-    }
-    to{
-        opacity:1;
-        transform:translateX(0);
-    }
+    from{opacity:0;transform:translateX(40px)}
+    to{opacity:1;transform:translateX(0)}
 }
 
-/* MOBILE */
-
+/* MOSLASHUVCHAN DIZAYN */
 @media(max-width:950px){
-
-    nav ul{
-        display:none;
-    }
-
-    .hero-container{
-        grid-template-columns:1fr;
-        text-align:center;
-    }
-
-    .hero p{
-        margin:auto;
-    }
-
-    .buttons{
-        justify-content:center;
-    }
-
-    .hero-photo{
-        order:-1;
-    }
-
-    .photo-card{
-        width:320px;
-    }
-
-    .photo-card img{
-        height:420px;
-    }
-
-    .hero h1{
-        font-size:46px;
-    }
-
-    .about-grid{
-        grid-template-columns:1fr;
-    }
-
-    .stats-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .cards{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .gallery-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
+    nav ul{display:none}
+    .hero-container{grid-template-columns:1fr;text-align:center}
+    .hero p{margin:auto}
+    .buttons{justify-content:center}
+    .hero-photo{order:-1}
+    .photo-card{width:320px}
+    .photo-card img{height:420px}
+    .hero h1{font-size:46px}
+    .about-grid{grid-template-columns:1fr}
+    .stats-grid{grid-template-columns:repeat(2,1fr)}
+    .direction-grid{grid-template-columns:repeat(2,1fr)}
+    .gallery-grid{grid-template-columns:repeat(2,1fr)}
 }
-
 @media(max-width:600px){
-
-    header{
-        padding:15px 5%;
-    }
-
-    .logo{
-        font-size:19px;
-    }
-
-    .hero{
-        padding:120px 5% 60px;
-    }
-
-    section{
-        padding:70px 5%;
-    }
-
-    .hero h1{
-        font-size:38px;
-    }
-
-    .hero h2{
-        font-size:21px;
-    }
-
-    .hero p{
-        font-size:16px;
-    }
-
-    .photo-card{
-        width:280px;
-    }
-
-    .photo-card img{
-        height:370px;
-    }
-
-    .section-title h2{
-        font-size:32px;
-    }
-
-    .stats-grid,
-    .cards,
-    .gallery-grid{
-        grid-template-columns:1fr;
-    }
+    header{padding:15px 5%}
+    .logo{font-size:19px}
+    .hero{padding:120px 5% 60px}
+    section{padding:70px 5%}
+    .hero h1{font-size:38px}
+    .hero h2{font-size:21px}
+    .hero p{font-size:16px}
+    .photo-card{width:280px}
+    .photo-card img{height:370px}
+    .section-title h2{font-size:32px}
+    .stats-grid,.direction-grid,.gallery-grid{grid-template-columns:1fr}
+    .main-mission{flex-direction:column;text-align:center;padding:30px 22px}
+    .main-mission h3{font-size:18px}
+    .achievement{flex-direction:column}
 }
 </style>
 </head>
@@ -644,7 +245,6 @@ footer{
 <header>
 <nav>
     <div class="logo">Bekzodbek <span>Portfolio</span></div>
-
     <ul>
         <li><a href="#bosh">Bosh sahifa</a></li>
         <li><a href="#men-haqimda">Men haqimda</a></li>
@@ -657,935 +257,295 @@ footer{
 </header>
 
 <!-- BOSH SAHIFA -->
-
 <section class="hero" id="bosh">
-
 <div class="hero-container">
-
     <div class="hero-text">
-
-        <div class="badge">
-            ✨ Shaxsiy professional portfolio
-        </div>
-
-        <h1>
-            Umarov <span>Bekzodbek</span>
-        </h1>
-
-        <h2>
-            Yoshlar bilan ishlash, ma’naviyat va ma’rifat yo‘nalishidagi faoliyat
-        </h2>
-
+        <div class="badge">✨ Shaxsiy professional portfolio</div>
+        <h1>Umarov <span>Bekzodbek</span></h1>
+        <h2>Yoshlar bilan ishlash, ma’naviyat va ma’rifat yo‘nalishidagi faoliyat</h2>
         <p>
             Andijon davlat pedagogika institutida yoshlar bilan ishlash,
-            talabalarni qo‘llab-quvvatlash, ma’naviy-ma’rifiy tadbirlar,
-            sport va ijtimoiy loyihalarni tashkil etish bo‘yicha faoliyatim
-            haqida ma’lumotlar jamlangan shaxsiy portfolio.
+            talabalarni qo‘llab-quvvatlash, sport va ijtimoiy loyihalarni
+            tashkil etish hamda talaba-yoshlarning bo‘sh vaqtini mazmunli
+            tashkil etish bo‘yicha faoliyatim haqida ma’lumotlar jamlangan shaxsiy portfolio.
         </p>
-
         <div class="buttons">
-            <a href="#men-haqimda" class="btn btn-primary">
-                Men haqimda →
-            </a>
-
-            <a href="#faoliyat" class="btn btn-light">
-                Faoliyatim
-            </a>
+            <a href="#men-haqimda" class="btn btn-primary">Men haqimda →</a>
+            <a href="#faoliyat" class="btn btn-light">Faoliyatim</a>
         </div>
-
     </div>
 
     <div class="hero-photo">
-
         <div class="photo-card">
-
-            <img
-                src="a47137ba-38d7-447e-a201-a91153da922e.png"
-                alt="Umarov Bekzodbek"
-            >
-
-            <div class="photo-label">
-                Umarov Bekzodbek
-            </div>
-
+            <img src="a47137ba-38d7-447e-a201-a91153da922e.png" alt="Umarov Bekzodbek">
+            <div class="photo-label">Umarov Bekzodbek</div>
         </div>
-
     </div>
-
 </div>
-
 </section>
 
-
 <!-- MEN HAQIMDA -->
-
 <section class="about" id="men-haqimda">
-
 <div class="container">
-
     <div class="section-title">
         <h2>Men <span>haqimda</span></h2>
         <p>Faoliyatim va professional yo‘nalishlarim</p>
     </div>
 
     <div class="about-grid">
-
         <div class="about-box">
-
-          <h3>Faoliyatim</h3>
-
-<p>
-    Andijon davlat pedagogika institutida talabalar bilan ishlash,
-    sport tadbirlari va musobaqalarni yuqori tashkiliy saviyada
-    tashkil etish hamda o‘tkazish, talaba-yoshlarning bo‘sh vaqtini
-    mazmunli tashkil etish faoliyatimning asosiy yo‘nalishlarini tashkil etadi.
-</p>
-
-<p>
-    Faoliyatim davomida talabalarni ommaviy sportga keng jalb qilish,
-    iqtidorli sportchilarni aniqlash va qo‘llab-quvvatlash,
-    institut miqyosidagi sport loyihalarini muvofiqlashtirish hamda
-    talaba-yoshlarning faol va sog‘lom turmush tarzini shakllantirishga
-    alohida e’tibor qarataman.
-</p>
-
-            <br>
-
+            <h3>Faoliyatim</h3>
             <p>
-                Ushbu portfolio orqali amalga oshirilgan ishlar,
-                tadbirlar, natijalar va yutuqlarni yagona platformada
-                jamlash maqsad qilingan.
+                Andijon davlat pedagogika institutida talabalar bilan ishlash,
+                sport tadbirlari va musobaqalarni yuqori tashkiliy saviyada
+                tashkil etish hamda o‘tkazish, talaba-yoshlarning bo‘sh vaqtini
+                mazmunli tashkil etish faoliyatimning asosiy yo‘nalishlarini tashkil etadi.
             </p>
-
+            <br>
+            <p>
+                Faoliyatim davomida talabalarni ommaviy sportga keng jalb qilish,
+                iqtidorli sportchilarni aniqlash va qo‘llab-quvvatlash,
+                institut miqyosidagi sport loyihalarini muvofiqlashtirish hamda
+                talaba-yoshlarning faol va sog‘lom turmush tarzini shakllantirishga
+                alohida e’tibor qarataman.
+            </p>
+            <br>
+            <p>
+                Ushbu portfolio orqali amalga oshirilgan ishlar, tadbirlar,
+                natijalar va yutuqlarni yagona platformada jamlash maqsad qilingan.
+            </p>
         </div>
 
         <div class="info-list">
-
-            <div class="info">
-                <strong>🏛 Ish joyi</strong>
-                <span>Andijon davlat pedagogika instituti</span>
-            </div>
-
-            <div class="info">
-                <strong>🎓 Ta’lim</strong>
-                <span>Magistratura</span>
-            </div>
-
-           <div class="info">
-    📌 Asosiy yo‘nalish
-    <small>Sport tadbirlarini tashkil etish va talaba-yoshlar bilan ishlash</small>
-</div>
-
-           <div class="info">
-    🎯 Maqsad
-    <small>Talabalarning bo‘sh vaqtini mazmunli tashkil etish, sportga jalb qilish va iqtidorli yoshlarni qo‘llab-quvvatlash</small>
-</div>
-
+            <div class="info"><strong>🏛 Ish joyi</strong><span>Andijon davlat pedagogika instituti</span></div>
+            <div class="info"><strong>🎓 Ta’lim</strong><span>Magistratura</span></div>
+            <div class="info"><strong>📌 Asosiy yo‘nalish</strong><span>Sport tadbirlarini tashkil etish va talaba-yoshlar bilan ishlash</span></div>
+            <div class="info"><strong>🎯 Maqsad</strong><span>Talabalarning bo‘sh vaqtini mazmunli tashkil etish, sportga jalb qilish va iqtidorli yoshlarni qo‘llab-quvvatlash</span></div>
         </div>
-
     </div>
-
 </div>
-
 </section>
 
-
 <!-- STATISTIKA -->
-
 <section class="stats" id="statistika">
-
 <div class="container">
-
     <div class="section-title">
-
         <h2>Faoliyat <span>statistikasi</span></h2>
-
         <p>2025–2026-o‘quv yilidagi asosiy ko‘rsatkichlar</p>
-
     </div>
 
     <div class="stats-grid">
-
         <div class="stat">
             <div class="stat-icon">👥</div>
             <h3><span class="counter" data-target="14000">0</span>+</h3>
             <p>Umumiy ishtirok</p>
         </div>
-
         <div class="stat">
             <div class="stat-icon">📅</div>
             <h3><span class="counter" data-target="100">0</span>+</h3>
             <p>Tadbir va loyihalar</p>
         </div>
-
         <div class="stat">
             <div class="stat-icon">🏅</div>
-           <h3><span class="counter" data-target="21">0</span></h3>
+            <h3><span class="counter" data-target="21">0</span></h3>
             <p>Qo‘lga kiritilgan medallar</p>
         </div>
-
         <div class="stat">
             <div class="stat-icon">🏆</div>
             <h3><span class="counter" data-target="12">0</span></h3>
             <p>Sport yo‘nalishlari</p>
         </div>
-
     </div>
-
 </div>
-
 </section>
 
-<style>
-
-.stats{
-    position:relative;
-    overflow:hidden;
-}
-
-.stats::before{
-    content:"";
-    position:absolute;
-    width:400px;
-    height:400px;
-    border-radius:50%;
-    background:rgba(255,255,255,.08);
-    top:-180px;
-    left:-100px;
-}
-
-.stats::after{
-    content:"";
-    position:absolute;
-    width:350px;
-    height:350px;
-    border-radius:50%;
-    background:rgba(255,255,255,.07);
-    bottom:-180px;
-    right:-80px;
-}
-
-.stats .container{
-    position:relative;
-    z-index:2;
-}
-
-.stat{
-    position:relative;
-}
-
-.stat-icon{
-    width:58px;
-    height:58px;
-    margin:0 auto 18px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:rgba(255,255,255,.16);
-    border:1px solid rgba(255,255,255,.25);
-    border-radius:18px;
-    font-size:27px;
-}
-
-.stat h3{
-    font-size:42px;
-    font-weight:800;
-    letter-spacing:1px;
-}
-
-.stat p{
-    margin-top:5px;
-}
-
-</style>
-
-<script>
-
-const counters = document.querySelectorAll('.counter');
-
-const startCounters = () => {
-
-    counters.forEach(counter => {
-
-        const target = Number(counter.getAttribute('data-target'));
-        let current = 0;
-
-        const duration = 1800;
-        const increment = target / (duration / 20);
-
-        const updateCounter = () => {
-
-            current += increment;
-
-            if(current < target){
-
-                counter.textContent = Math.floor(current).toLocaleString('uz-UZ');
-
-                setTimeout(updateCounter,20);
-
-            }else{
-
-                counter.textContent = target.toLocaleString('uz-UZ');
-
-            }
-
-        };
-
-        updateCounter();
-
-    });
-
-};
-
-const statsSection = document.querySelector('#statistika');
-
-const observer = new IntersectionObserver((entries) => {
-
-    entries.forEach(entry => {
-
-        if(entry.isIntersecting){
-
-            startCounters();
-
-            observer.disconnect();
-
-        }
-
-    });
-
-},{threshold:0.3});
-
-observer.observe(statsSection);
-
-</script>
-
-
 <!-- FAOLIYAT -->
-
 <section class="activity" id="faoliyat">
-
 <div class="container">
-
     <div class="section-title">
-
         <h2>Mening <span>faoliyatim</span></h2>
-
-        <p>
-            Talaba-yoshlarning bo‘sh vaqtini mazmunli tashkil etish
-            va sport tadbirlarini yuqori saviyada o‘tkazish
-        </p>
-
+        <p>Talaba-yoshlarning bo‘sh vaqtini mazmunli tashkil etish va sport tadbirlarini yuqori saviyada o‘tkazish</p>
     </div>
 
-    <!-- ASOSIY VAZIFA -->
-
     <div class="main-mission">
-
         <div class="mission-icon">🎯</div>
-
         <div>
-
-            <div class="mission-label">
-                ASOSIY VAZIFAM
-            </div>
-
+            <div class="mission-label">ASOSIY VAZIFAM</div>
             <h3>
                 Talaba-yoshlarning bo‘sh vaqtini mazmunli tashkil etish,
                 ularni sport va sog‘lom turmush tarziga keng jalb qilish
                 hamda sport tadbirlari va musobaqalarni yuqori tashkiliy
                 saviyada o‘tkazishni ta’minlash.
             </h3>
-
         </div>
-
     </div>
 
-
-    <!-- FAOLIYAT YO‘NALISHLARI -->
-
-  <div class="main-purpose">
-
-    <div class="purpose-icon">🎯</div>
-
-    <div class="purpose-content">
-
-        <span>ASOSIY VAZIFAM</span>
-
-        <h3>
-            Talaba-yoshlarning bo‘sh vaqtini mazmunli tashkil etish,
-            ularni sport va sog‘lom turmush tarziga keng jalb qilish
-            hamda sport tadbirlari va musobaqalarni yuqori tashkiliy
-            saviyada tashkil etish va o‘tkazish.
-        </h3>
-
+    <div class="direction-grid">
+        <div class="direction-card">
+            <div class="direction-icon">🏆</div>
+            <h3>Sport musobaqalari</h3>
+            <p>Institutda futbol, voleybol, basketbol, stol tennisi, shaxmat-shashka, yengil atletika va boshqa sport turlari bo‘yicha musobaqalarni yuqori saviyada tashkil etish va o‘tkazish.</p>
+        </div>
+        <div class="direction-card">
+            <div class="direction-icon">⚽</div>
+            <h3>Ommaviy sport</h3>
+            <p>Talaba-yoshlarni ommaviy sport tadbirlariga keng jalb qilish, sog‘lom turmush tarzini targ‘ib etish va jismoniy faollikni oshirish.</p>
+        </div>
+        <div class="direction-card">
+            <div class="direction-icon">⏰</div>
+            <h3>Bo‘sh vaqtni mazmunli tashkil etish</h3>
+            <p>Talabalarning darsdan tashqari bo‘sh vaqtlarini sport, intellektual va ijtimoiy tadbirlar orqali mazmunli tashkil etish.</p>
+        </div>
+        <div class="direction-card">
+            <div class="direction-icon">🥇</div>
+            <h3>Iqtidorli sportchilar</h3>
+            <p>Musobaqalar jarayonida iqtidorli va istiqbolli sportchilarni aniqlash, saralash hamda institut terma jamoalariga jalb etish.</p>
+        </div>
+        <div class="direction-card">
+            <div class="direction-icon">📋</div>
+            <h3>Tashkiliy ishlar</h3>
+            <p>Sport tadbirlarining tashkiliy jarayonlarini muvofiqlashtirish, ishtirokchilar, jadval va natijalarni shakllantirish.</p>
+        </div>
+        <div class="direction-card">
+            <div class="direction-icon">🤝</div>
+            <h3>Talabalar bilan ishlash</h3>
+            <p>Talabalar o‘rtasida jamoaviylik, faollik, liderlik va sog‘lom raqobat muhitini shakllantirish.</p>
+        </div>
     </div>
-
 </div>
-
-
-<div class="direction-grid">
-
-    <div class="direction-card">
-
-        <div class="direction-icon">🏆</div>
-
-        <h3>Sport musobaqalari</h3>
-
-        <p>
-            Institutda futbol, voleybol, basketbol, stol tennisi,
-            shaxmat-shashka, yengil atletika va boshqa sport turlari
-            bo‘yicha musobaqalarni yuqori saviyada tashkil etish.
-        </p>
-
-    </div>
-
-
-    <div class="direction-card">
-
-        <div class="direction-icon">⚽</div>
-
-        <h3>Ommaviy sport</h3>
-
-        <p>
-            Talaba-yoshlarni ommaviy sport tadbirlariga keng jalb qilish,
-            sog‘lom turmush tarzini targ‘ib etish va jismoniy faollikni
-            oshirish.
-        </p>
-
-    </div>
-
-
-    <div class="direction-card">
-
-        <div class="direction-icon">⏰</div>
-
-        <h3>Bo‘sh vaqtni mazmunli tashkil etish</h3>
-
-        <p>
-            Talabalarning darsdan tashqari bo‘sh vaqtlarini sport,
-            intellektual va ijtimoiy tadbirlar orqali mazmunli tashkil etish.
-        </p>
-
-    </div>
-
-
-    <div class="direction-card">
-
-        <div class="direction-icon">🥇</div>
-
-        <h3>Iqtidorli sportchilar</h3>
-
-        <p>
-            Musobaqalar jarayonida iqtidorli va istiqbolli sportchilarni
-            aniqlash, saralash hamda institut terma jamoalariga jalb etish.
-        </p>
-
-    </div>
-
-
-    <div class="direction-card">
-
-        <div class="direction-icon">📋</div>
-
-        <h3>Tashkiliy ishlar</h3>
-
-        <p>
-            Sport tadbirlarining tashkiliy jarayonlarini muvofiqlashtirish,
-            ishtirokchilar, jadval va natijalarni shakllantirish.
-        </p>
-
-    </div>
-
-
-    <div class="direction-card">
-
-        <div class="direction-icon">🤝</div>
-
-        <h3>Talabalar bilan ishlash</h3>
-
-        <p>
-            Talabalar o‘rtasida jamoaviylik, faollik, liderlik va sog‘lom
-            raqobat muhitini shakllantirish.
-        </p>
-
-    </div>
-
-</div>
-
-
-<style>
-
-.main-purpose {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-    padding: 35px;
-    margin-bottom: 40px;
-    border-radius: 25px;
-    color: white;
-    background: linear-gradient(135deg,#0757d9,#00a8ff);
-    box-shadow: 0 20px 50px rgba(0,100,220,.20);
-    position: relative;
-    overflow: hidden;
-}
-
-.main-purpose::after {
-    content: "";
-    position: absolute;
-    width: 260px;
-    height: 260px;
-    right: -100px;
-    top: -120px;
-    border-radius: 50%;
-    background: rgba(255,255,255,.10);
-}
-
-.purpose-icon {
-    width: 75px;
-    height: 75px;
-    min-width: 75px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 22px;
-    background: rgba(255,255,255,.16);
-    font-size: 35px;
-}
-
-.purpose-content {
-    position: relative;
-    z-index: 2;
-}
-
-.purpose-content span {
-    font-size: 12px;
-    font-weight: 800;
-    letter-spacing: 2px;
-}
-
-.purpose-content h3 {
-    font-size: 20px;
-    line-height: 1.6;
-    margin-top: 10px;
-    font-weight: 600;
-}
-
-.direction-grid {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 22px;
-}
-
-.direction-card {
-    background: white;
-    padding: 30px;
-    border-radius: 22px;
-    border: 1px solid #e2eaf5;
-    box-shadow: 0 10px 30px rgba(30,70,120,.07);
-    transition: .35s;
-}
-
-.direction-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(30,70,120,.14);
-}
-
-.direction-icon {
-    width: 58px;
-    height: 58px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 17px;
-    background: #edf6ff;
-    font-size: 28px;
-    margin-bottom: 20px;
-}
-
-.direction-card h3 {
-    font-size: 19px;
-    color: #15233e;
-    margin-bottom: 12px;
-}
-
-.direction-card p {
-    color: #68788e;
-    font-size: 14px;
-    line-height: 1.7;
-}
-
-@media(max-width:850px) {
-    .direction-grid {
-        grid-template-columns: repeat(2,1fr);
-    }
-}
-
-@media(max-width:600px) {
-    .main-purpose {
-        flex-direction: column;
-        text-align: center;
-        padding: 28px 20px;
-    }
-
-    .direction-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-</style>
-
-/* ASOSIY VAZIFA */
-
-.main-mission{
-    display:flex;
-    align-items:center;
-    gap:25px;
-    padding:35px 40px;
-    margin-bottom:45px;
-    border-radius:25px;
-    background:linear-gradient(135deg,#0757d9,#00a8ff);
-    color:white;
-    box-shadow:0 20px 50px rgba(7,87,217,.22);
-    position:relative;
-    overflow:hidden;
-}
-
-.main-mission::after{
-    content:"";
-    position:absolute;
-    width:250px;
-    height:250px;
-    border-radius:50%;
-    background:rgba(255,255,255,.08);
-    right:-80px;
-    top:-100px;
-}
-
-.mission-icon{
-    min-width:70px;
-    height:70px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:rgba(255,255,255,.15);
-    border-radius:20px;
-    font-size:34px;
-}
-
-.mission-label{
-    font-size:12px;
-    font-weight:800;
-    letter-spacing:2px;
-    opacity:.8;
-    margin-bottom:10px;
-}
-
-.main-mission h3{
-    font-size:21px;
-    line-height:1.6;
-    font-weight:600;
-    max-width:950px;
-}
-
-
-/* FAOLIYAT KARTALARI */
-
-.activity-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:25px;
-}
-
-.activity-card{
-    position:relative;
-    background:white;
-    padding:32px;
-    border-radius:23px;
-    border:1px solid #e3ebf6;
-    box-shadow:0 10px 35px rgba(30,75,130,.07);
-    overflow:hidden;
-    transition:.35s;
-}
-
-.activity-card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 22px 45px rgba(30,75,130,.14);
-}
-
-.activity-icon{
-    width:60px;
-    height:60px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:#e9f4ff;
-    border-radius:18px;
-    font-size:28px;
-    margin-bottom:20px;
-}
-
-.activity-number{
-    position:absolute;
-    right:25px;
-    top:25px;
-    color:#e7eff9;
-    font-size:42px;
-    font-weight:900;
-}
-
-.activity-card h3{
-    color:#0b1630;
-    font-size:21px;
-    line-height:1.35;
-    margin-bottom:14px;
-    padding-right:25px;
-}
-
-.activity-card p{
-    color:#69788d;
-    line-height:1.7;
-    font-size:15px;
-}
-
-
-/* NATIJA */
-
-.activity-result{
-    margin-top:45px;
-    padding:30px 35px;
-    border-radius:23px;
-    background:#f0f7ff;
-    border:1px solid #d8e9fa;
-    display:flex;
-    align-items:center;
-    gap:22px;
-}
-
-.result-icon{
-    min-width:62px;
-    height:62px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:18px;
-    background:white;
-    font-size:28px;
-    box-shadow:0 8px 25px rgba(30,75,130,.08);
-}
-
-.result-label{
-    color:#0757d9;
-    font-size:12px;
-    font-weight:800;
-    letter-spacing:2px;
-    margin-bottom:7px;
-}
-
-.activity-result h3{
-    color:#263247;
-    line-height:1.6;
-    font-size:19px;
-}
-
-.activity-result strong{
-    color:#0757d9;
-}
-
-
-/* TELEFON */
-
-@media(max-width:950px){
-
-    .activity-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-}
-
-@media(max-width:600px){
-
-    .main-mission{
-        flex-direction:column;
-        text-align:center;
-        padding:30px 22px;
-    }
-
-    .main-mission h3{
-        font-size:18px;
-    }
-
-    .activity-grid{
-        grid-template-columns:1fr;
-    }
-
-    .activity-result{
-        flex-direction:column;
-        text-align:center;
-        padding:28px 20px;
-    }
-
-}
-
-</style>
-
+</section>
 
 <!-- YUTUQLAR -->
-
 <section class="achievements" id="yutuqlar">
-
 <div class="container">
-
     <div class="section-title">
-
         <h2>Asosiy <span>yutuqlar</span></h2>
-
-        <p>Faoliyat davomida erishilgan natijalar</p>
-
+        <p>2025–2026-o‘quv yili davomida amalga oshirilgan asosiy ishlar va natijalar</p>
     </div>
 
     <div class="achievement">
-
         <div class="achievement-number">01</div>
-
         <div>
-            <h3>Talabalar sport loyihalari</h3>
-            <p>
-                Institut talabalari o‘rtasida ko‘plab sport musobaqalari
-                tashkil etilib, respublika va hududiy bosqichlarda
-                sovrinli natijalarga erishildi.
-            </p>
+            <h3>“Talabalar ligasi – 2026”</h3>
+            <p>Institut bosqichida 5 ta fakultetdan 4 330 nafar talaba-yosh sportning 12 ta turi bo‘yicha ishtirok etdi. Respublika bosqichida chim ustida xokkeydan oltin, badminton va voleyboldan kumush va bronza medallar, shuningdek 1500 metrga yugurishda oltin medal qo‘lga kiritildi.</p>
         </div>
-
     </div>
 
     <div class="achievement">
-
         <div class="achievement-number">02</div>
-
         <div>
-            <h3>“Besh tashabbus olimpiadasi”</h3>
-            <p>
-                Talabalarni ommaviy sport, madaniyat va ijodiy
-                loyihalarga keng jalb etish ishlari amalga oshirildi.
-            </p>
+            <h3>“Besh tashabbus” olimpiadasi</h3>
+            <p>Institut bosqichida 3 877 nafar talaba-yosh ishtirok etdi. Respublika va hududiy bosqichlarda kurashdan 1 ta oltin hamda stol tennisidan 1 ta kumush medal qo‘lga kiritildi.</p>
         </div>
-
     </div>
 
     <div class="achievement">
-
         <div class="achievement-number">03</div>
-
         <div>
             <h3>“Yangi O‘zbekiston talabalari Olimpiadasi”</h3>
-            <p>
-                Institut bosqichida talabalar ishtiroki ta’minlanib,
-                g‘oliblar asosida institut terma jamoasi shakllantirildi.
-            </p>
+            <p>Institut bosqichida 1 469 nafar talaba, hududiy bosqichda 120 nafar sportchi-talaba, Respublika final bosqichida 64 nafar sportchi-talaba ishtirok etdi. Finalda 15 ta medal: 2 ta oltin, 6 ta kumush va 7 ta bronza medal qo‘lga kiritildi.</p>
         </div>
-
     </div>
 
     <div class="achievement">
-
         <div class="achievement-number">04</div>
-
         <div>
-            <h3>Yoshlar bilan tizimli ishlash</h3>
-            <p>
-                Talabalarning ijtimoiy faolligini oshirishga qaratilgan
-                turli tadbirlar, loyihalar va tashabbuslar amalga oshirildi.
-            </p>
+            <h3>“Chorshanba – Sport kuni”</h3>
+            <p>Haftaning har chorshanba kuni sport mashg‘ulotlari yo‘lga qo‘yilib, professor-o‘qituvchi va xodimlarning 2 560 nafardan ortiq, talabalarning 2 960 nafardan ortiq ishtiroki ta’minlandi.</p>
         </div>
-
     </div>
 
+    <div class="achievement">
+        <div class="achievement-number">05</div>
+        <div>
+            <h3>“Talaba-yugur” ommaviy yugurish musobaqasi</h3>
+            <p>1 215 nafar talaba va 223 nafar professor-o‘qituvchi, jami 1 438 nafar ishtirokchi qatnashdi. Ishtirokchilar elektron ro‘yxatdan o‘tkazilib, natijalar maxsus elektron chiplar orqali qayd etildi.</p>
+        </div>
+    </div>
+
+    <div class="achievement">
+        <div class="achievement-number">06</div>
+        <div>
+            <h3>Jismoniy tayyorgarlik sinovlari</h3>
+            <p>my.sport.uz platformasi orqali 3 435 nafar talaba ro‘yxatdan o‘tdi. Yakuniy natijalarga ko‘ra 67 nafar talaba I darajali, 225 nafari II darajali va 1 619 nafari III darajali jismoniy tayyorgarlik darajasini qo‘lga kiritdi.</p>
+        </div>
+    </div>
 </div>
-
 </section>
-
 
 <!-- FOTOALBOM -->
-
 <section class="gallery">
-
 <div class="container">
-
     <div class="section-title">
-
         <h2>Faoliyatdan <span>lavhalar</span></h2>
-
-        <p>Tez orada bu bo‘limga tadbirlar fotosuratlari joylashtiriladi</p>
-
+        <p>Tadbirlar va sport musobaqalaridan fotosuratlar</p>
     </div>
-
     <div class="gallery-grid">
-
-        <div class="gallery-item">
-            📸 Tadbirlar
-        </div>
-
-        <div class="gallery-item">
-            🏆 Sport musobaqalari
-        </div>
-
-        <div class="gallery-item">
-            🎓 Talabalar bilan
-        </div>
-
+        <div class="gallery-item">📸 Tadbirlar</div>
+        <div class="gallery-item">🏆 Sport musobaqalari</div>
+        <div class="gallery-item">🎓 Talabalar bilan</div>
     </div>
-
 </div>
-
 </section>
-
 
 <!-- BOG‘LANISH -->
-
 <section class="contact" id="aloqa">
-
 <div class="container">
-
     <div class="section-title">
-
         <h2>Bog‘lanish</h2>
-
         <p>Men bilan aloqa qilish uchun</p>
-
     </div>
-
     <div class="contact-box">
-
-        <div class="contact-item">
-            📍 Andijon davlat pedagogika instituti
-        </div>
-
-        <div class="contact-item">
-            👤 Umarov Bekzodbek
-        </div>
-
-        <div class="contact-item">
-            📧 Elektron pochta — tez orada qo‘shiladi
-        </div>
-
-        <div class="contact-item">
-            📱 Telefon — tez orada qo‘shiladi
-        </div>
-
+        <div class="contact-item">📍 Andijon davlat pedagogika instituti</div>
+        <div class="contact-item">👤 Umarov Bekzodbek</div>
+        <div class="contact-item">📧 Elektron pochta — tez orada qo‘shiladi</div>
+        <div class="contact-item">📱 Telefon — tez orada qo‘shiladi</div>
     </div>
-
 </div>
-
 </section>
 
-
 <footer>
-
-    <p>
-        © 2026 Umarov Bekzodbek. Shaxsiy portfolio.
-    </p>
-
+    <p>© 2026 Umarov Bekzodbek. Shaxsiy portfolio.</p>
 </footer>
+
+<script>
+const statsSection = document.querySelector('#statistika');
+let countersStarted = false;
+
+function startCounters(){
+    if(countersStarted) return;
+    countersStarted = true;
+
+    document.querySelectorAll('.counter').forEach(counter=>{
+        const target = Number(counter.dataset.target);
+        const duration = 1600;
+        const start = performance.now();
+
+        function animate(now){
+            const progress = Math.min((now-start)/duration,1);
+            const eased = 1-Math.pow(1-progress,3);
+            const value = Math.floor(target*eased);
+            counter.textContent = value.toLocaleString('uz-UZ');
+
+            if(progress<1){
+                requestAnimationFrame(animate);
+            }else{
+                counter.textContent = target.toLocaleString('uz-UZ');
+            }
+        }
+        requestAnimationFrame(animate);
+    });
+}
+
+const observer = new IntersectionObserver(entries=>{
+    if(entries[0].isIntersecting){
+        startCounters();
+        observer.disconnect();
+    }
+},{threshold:.25});
+
+observer.observe(statsSection);
+</script>
 
 </body>
 </html>
