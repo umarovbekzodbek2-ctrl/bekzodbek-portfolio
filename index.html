@@ -1,0 +1,406 @@
+ <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Umarov Bekzodbek | Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fb;
+            color: #222;
+        }
+
+        header {
+            background: linear-gradient(135deg, #005bea, #00c6fb);
+            color: white;
+            padding: 25px 8%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.15);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(135deg, #e0f2ff, #ffffff);
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            color: #005bea;
+            margin-bottom: 20px;
+        }
+
+        .hero h2 {
+            font-size: 27px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 19px;
+            line-height: 1.7;
+            color: #555;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 14px 30px;
+            background: #005bea;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #003f9e;
+            transform: translateY(-3px);
+        }
+
+        section {
+            padding: 80px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 35px;
+            color: #005bea;
+            margin-bottom: 45px;
+        }
+
+        .about {
+            background: white;
+        }
+
+        .about-text {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 35px 20px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-7px);
+        }
+
+        .stat-card h3 {
+            font-size: 40px;
+            color: #005bea;
+            margin-bottom: 10px;
+        }
+
+        .stat-card p {
+            color: #555;
+            font-size: 17px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-7px);
+        }
+
+        .card h3 {
+            color: #005bea;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        .card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .contact {
+            background: #005bea;
+            color: white;
+            text-align: center;
+        }
+
+        .contact .section-title {
+            color: white;
+        }
+
+        .contact p {
+            font-size: 19px;
+            margin: 12px;
+        }
+
+        footer {
+            background: #111827;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        @media (max-width: 800px) {
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            nav {
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            nav ul {
+                gap: 12px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <div class="logo">Bekzodbek Portfolio</div>
+
+        <ul>
+            <li><a href="#bosh">Bosh sahifa</a></li>
+            <li><a href="#men-haqimda">Men haqimda</a></li>
+            <li><a href="#statistika">Statistika</a></li>
+            <li><a href="#faoliyat">Faoliyat</a></li>
+            <li><a href="#aloqa">Bog‘lanish</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero" id="bosh">
+    <div class="hero-content">
+
+        <h1>Umarov Bekzodbek</h1>
+
+        <h2>Yoshlar bilan ishlash va ma’naviy-ma’rifiy faoliyat</h2>
+
+        <p>
+            Andijon davlat pedagogika institutida yoshlar bilan ishlash,
+            ma’naviyat va ma’rifat yo‘nalishidagi faoliyatimga bag‘ishlangan
+            shaxsiy portfolio sayt.
+        </p>
+
+        <a href="#men-haqimda" class="btn">
+            Men haqimda
+        </a>
+
+    </div>
+</section>
+
+<section class="about" id="men-haqimda">
+
+    <h2 class="section-title">Men haqimda</h2>
+
+    <div class="about-text">
+
+        <p>
+            Assalomu alaykum! Men Umarov Bekzodbek.
+            Ushbu saytda faoliyatim, amalga oshirgan loyihalarim,
+            tadbirlarim, sport musobaqalari, yoshlar bilan ishlash
+            jarayonlari va erishilgan natijalar haqida ma’lumotlar
+            jamlanadi.
+        </p>
+
+    </div>
+
+</section>
+
+<section id="statistika">
+
+    <h2 class="section-title">Faoliyat statistikasi</h2>
+
+    <div class="stats">
+
+        <div class="stat-card">
+            <h3>100+</h3>
+            <p>Tadbirlar</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>1000+</h3>
+            <p>Ishtirokchilar</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>17</h3>
+            <p>Medallar</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>2025–26</h3>
+            <p>O‘quv yili</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="faoliyat">
+
+    <h2 class="section-title">Faoliyat yo‘nalishlari</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>🏆 Sport tadbirlari</h3>
+            <p>
+                Talabalar o‘rtasida sport musobaqalari,
+                spartakiadalar va turli sport loyihalarini tashkil etish.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🎓 Yoshlar bilan ishlash</h3>
+            <p>
+                Talabalarning bo‘sh vaqtini mazmunli tashkil etish,
+                yoshlar loyihalari va tashabbuslarini qo‘llab-quvvatlash.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>📚 Ma’naviy-ma’rifiy ishlar</h3>
+            <p>
+                Ma’naviy-ma’rifiy tadbirlar, uchrashuvlar,
+                davra suhbatlari va targ‘ibot tadbirlarini tashkil etish.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🏅 Tanlovlar</h3>
+            <p>
+                Talabalar o‘rtasida intellektual va ijodiy tanlovlarni
+                tashkil etish hamda ishtirokini ta’minlash.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>📸 Fotoalbom</h3>
+            <p>
+                Faoliyat davomida amalga oshirilgan tadbirlar va
+                loyihalardan foto va videolar.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>📄 Hisobotlar</h3>
+            <p>
+                Amalga oshirilgan ishlar, yillik hisobotlar va
+                faoliyat natijalari.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="contact" id="aloqa">
+
+    <h2 class="section-title">Bog‘lanish</h2>
+
+    <p>📍 Andijon davlat pedagogika instituti</p>
+
+    <p>📧 Elektron pochta: Sizning emailingiz</p>
+
+    <p>📱 Telefon: Sizning telefon raqamingiz</p>
+
+</section>
+
+<footer>
+
+    <p>
+        © 2026 Umarov Bekzodbek. Barcha huquqlar himoyalangan.
+    </p>
+
+</footer>
+
+</body>
+</html>
