@@ -1,403 +1,1088 @@
- <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Umarov Bekzodbek | Portfolio</title>
+<title>Umarov Bekzodbek | Portfolio</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
 
-        body {
-            font-family: Arial, sans-serif;
-            background: #f5f7fb;
-            color: #222;
-        }
+:root{
+    --blue:#0757d9;
+    --blue2:#00a8ff;
+    --dark:#0b1630;
+    --text:#263247;
+    --light:#f4f8ff;
+    --white:#ffffff;
+}
 
-        header {
-            background: linear-gradient(135deg, #005bea, #00c6fb);
-            color: white;
-            padding: 25px 8%;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 3px 15px rgba(0,0,0,0.15);
-        }
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:var(--light);
+    color:var(--text);
+    overflow-x:hidden;
+}
 
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
+a{
+    text-decoration:none;
+}
 
-        .logo {
-            font-size: 25px;
-            font-weight: bold;
-        }
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+    padding:18px 7%;
+    background:rgba(7,87,217,.92);
+    backdrop-filter:blur(15px);
+    box-shadow:0 5px 25px rgba(0,0,0,.12);
+}
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 25px;
-            flex-wrap: wrap;
-        }
+nav{
+    max-width:1250px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
 
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
+.logo{
+    color:white;
+    font-size:24px;
+    font-weight:800;
+    letter-spacing:.5px;
+}
 
-        nav ul li a:hover {
-            text-decoration: underline;
-        }
+.logo span{
+    color:#8ee7ff;
+}
 
-        .hero {
-            min-height: 90vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 50px 20px;
-            background: linear-gradient(135deg, #e0f2ff, #ffffff);
-        }
+nav ul{
+    display:flex;
+    gap:25px;
+    list-style:none;
+}
 
-        .hero-content {
-            max-width: 850px;
-        }
+nav ul li a{
+    color:white;
+    font-weight:600;
+    font-size:15px;
+    transition:.3s;
+}
 
-        .hero h1 {
-            font-size: 52px;
-            color: #005bea;
-            margin-bottom: 20px;
-        }
+nav ul li a:hover{
+    color:#8ee7ff;
+}
 
-        .hero h2 {
-            font-size: 27px;
-            margin-bottom: 20px;
-        }
+/* HERO */
 
-        .hero p {
-            font-size: 19px;
-            line-height: 1.7;
-            color: #555;
-        }
+.hero{
+    min-height:100vh;
+    padding:140px 7% 80px;
+    background:
+        radial-gradient(circle at 10% 20%,rgba(0,168,255,.18),transparent 30%),
+        radial-gradient(circle at 90% 80%,rgba(7,87,217,.18),transparent 30%),
+        linear-gradient(135deg,#eef7ff,#ffffff);
+    display:flex;
+    align-items:center;
+}
 
-        .btn {
-            display: inline-block;
-            margin-top: 30px;
-            padding: 14px 30px;
-            background: #005bea;
-            color: white;
-            text-decoration: none;
-            border-radius: 30px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
+.hero-container{
+    max-width:1250px;
+    width:100%;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1.15fr .85fr;
+    gap:70px;
+    align-items:center;
+}
 
-        .btn:hover {
-            background: #003f9e;
-            transform: translateY(-3px);
-        }
+.hero-text{
+    animation:fadeLeft 1s ease;
+}
 
-        section {
-            padding: 80px 8%;
-        }
+.badge{
+    display:inline-block;
+    padding:10px 18px;
+    background:#e5f2ff;
+    color:var(--blue);
+    border-radius:30px;
+    font-weight:700;
+    margin-bottom:22px;
+}
 
-        .section-title {
-            text-align: center;
-            font-size: 35px;
-            color: #005bea;
-            margin-bottom: 45px;
-        }
+.hero h1{
+    font-size:64px;
+    line-height:1.05;
+    color:var(--dark);
+    margin-bottom:20px;
+}
 
-        .about {
-            background: white;
-        }
+.hero h1 span{
+    color:var(--blue);
+}
 
-        .about-text {
-            max-width: 900px;
-            margin: auto;
-            text-align: center;
-            font-size: 18px;
-            line-height: 1.8;
-            color: #555;
-        }
+.hero h2{
+    font-size:25px;
+    line-height:1.4;
+    margin-bottom:22px;
+}
 
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 25px;
-        }
+.hero p{
+    max-width:700px;
+    color:#607089;
+    font-size:18px;
+    line-height:1.8;
+}
 
-        .stat-card {
-            background: white;
-            padding: 35px 20px;
-            text-align: center;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-            transition: 0.3s;
-        }
+.buttons{
+    display:flex;
+    gap:15px;
+    margin-top:32px;
+    flex-wrap:wrap;
+}
 
-        .stat-card:hover {
-            transform: translateY(-7px);
-        }
+.btn{
+    display:inline-block;
+    padding:15px 27px;
+    border-radius:35px;
+    font-weight:700;
+    transition:.3s;
+}
 
-        .stat-card h3 {
-            font-size: 40px;
-            color: #005bea;
-            margin-bottom: 10px;
-        }
+.btn-primary{
+    color:white;
+    background:linear-gradient(135deg,var(--blue),var(--blue2));
+    box-shadow:0 10px 25px rgba(7,87,217,.25);
+}
 
-        .stat-card p {
-            color: #555;
-            font-size: 17px;
-        }
+.btn-primary:hover{
+    transform:translateY(-4px);
+    box-shadow:0 15px 30px rgba(7,87,217,.35);
+}
 
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
+.btn-light{
+    color:var(--blue);
+    background:white;
+    border:1px solid #d7e6f8;
+}
 
-        .card {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-            transition: 0.3s;
-        }
+.btn-light:hover{
+    transform:translateY(-4px);
+}
 
-        .card:hover {
-            transform: translateY(-7px);
-        }
+/* PHOTO */
 
-        .card h3 {
-            color: #005bea;
-            margin-bottom: 15px;
-            font-size: 22px;
-        }
+.hero-photo{
+    display:flex;
+    justify-content:center;
+    animation:fadeRight 1s ease;
+}
 
-        .card p {
-            color: #666;
-            line-height: 1.6;
-        }
+.photo-card{
+    position:relative;
+    width:390px;
+    padding:12px;
+    border-radius:35px;
+    background:linear-gradient(135deg,#0757d9,#00c6ff);
+    box-shadow:0 30px 70px rgba(7,87,217,.28);
+    transform:rotate(2deg);
+}
 
-        .contact {
-            background: #005bea;
-            color: white;
-            text-align: center;
-        }
+.photo-card img{
+    display:block;
+    width:100%;
+    height:510px;
+    object-fit:cover;
+    object-position:center top;
+    border-radius:27px;
+    background:white;
+    transform:rotate(-2deg);
+}
 
-        .contact .section-title {
-            color: white;
-        }
+.photo-label{
+    position:absolute;
+    bottom:28px;
+    left:30px;
+    right:30px;
+    padding:15px;
+    border-radius:15px;
+    background:rgba(255,255,255,.92);
+    backdrop-filter:blur(10px);
+    text-align:center;
+    font-weight:800;
+    color:var(--dark);
+}
 
-        .contact p {
-            font-size: 19px;
-            margin: 12px;
-        }
+/* SECTIONS */
 
-        footer {
-            background: #111827;
-            color: white;
-            text-align: center;
-            padding: 25px;
-        }
+section{
+    padding:100px 7%;
+}
 
-        @media (max-width: 800px) {
-            .hero h1 {
-                font-size: 38px;
-            }
+.container{
+    max-width:1250px;
+    margin:auto;
+}
 
-            .stats {
-                grid-template-columns: repeat(2, 1fr);
-            }
+.section-title{
+    text-align:center;
+    margin-bottom:55px;
+}
 
-            .cards {
-                grid-template-columns: 1fr;
-            }
+.section-title span{
+    color:var(--blue);
+}
 
-            nav {
-                gap: 20px;
-            }
-        }
+.section-title h2{
+    font-size:40px;
+    color:var(--dark);
+    margin-bottom:12px;
+}
 
-        @media (max-width: 500px) {
-            .stats {
-                grid-template-columns: 1fr;
-            }
+.section-title p{
+    color:#718096;
+    font-size:17px;
+}
 
-            nav ul {
-                gap: 12px;
-                font-size: 14px;
-            }
-        }
-    </style>
+/* ABOUT */
+
+.about{
+    background:white;
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.about-box{
+    padding:35px;
+    border-radius:25px;
+    background:linear-gradient(135deg,#f3f8ff,#ffffff);
+    border:1px solid #e1ecfa;
+}
+
+.about-box h3{
+    font-size:27px;
+    color:var(--dark);
+    margin-bottom:20px;
+}
+
+.about-box p{
+    line-height:1.8;
+    color:#637189;
+    font-size:17px;
+}
+
+.info-list{
+    display:grid;
+    gap:15px;
+}
+
+.info{
+    padding:18px 20px;
+    background:white;
+    border-radius:15px;
+    box-shadow:0 8px 25px rgba(25,70,120,.07);
+}
+
+.info strong{
+    display:block;
+    color:var(--blue);
+    margin-bottom:5px;
+}
+
+.info span{
+    color:#5f6f85;
+}
+
+/* STATS */
+
+.stats{
+    background:linear-gradient(135deg,#0757d9,#00a8ff);
+    color:white;
+}
+
+.stats .section-title h2,
+.stats .section-title p{
+    color:white;
+}
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:22px;
+}
+
+.stat{
+    padding:35px 20px;
+    text-align:center;
+    border-radius:22px;
+    background:rgba(255,255,255,.13);
+    border:1px solid rgba(255,255,255,.2);
+    backdrop-filter:blur(10px);
+    transition:.3s;
+}
+
+.stat:hover{
+    transform:translateY(-8px);
+    background:rgba(255,255,255,.2);
+}
+
+.stat h3{
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.stat p{
+    font-size:16px;
+    opacity:.9;
+}
+
+/* ACTIVITY */
+
+.activity{
+    background:#f7faff;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:32px;
+    border-radius:22px;
+    border:1px solid #e5edf7;
+    box-shadow:0 10px 35px rgba(30,75,130,.07);
+    transition:.35s;
+}
+
+.card:hover{
+    transform:translateY(-9px);
+    box-shadow:0 20px 45px rgba(30,75,130,.13);
+}
+
+.icon{
+    width:58px;
+    height:58px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:17px;
+    background:#e8f3ff;
+    font-size:27px;
+    margin-bottom:20px;
+}
+
+.card h3{
+    color:var(--dark);
+    margin-bottom:13px;
+    font-size:21px;
+}
+
+.card p{
+    color:#69788d;
+    line-height:1.7;
+}
+
+/* ACHIEVEMENTS */
+
+.achievements{
+    background:white;
+}
+
+.achievement{
+    display:flex;
+    gap:20px;
+    align-items:flex-start;
+    padding:25px;
+    margin-bottom:18px;
+    border-radius:18px;
+    background:#f7faff;
+    border-left:5px solid var(--blue);
+}
+
+.achievement-number{
+    min-width:48px;
+    height:48px;
+    border-radius:50%;
+    background:var(--blue);
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:800;
+}
+
+.achievement h3{
+    margin-bottom:8px;
+    color:var(--dark);
+}
+
+.achievement p{
+    color:#68788d;
+    line-height:1.6;
+}
+
+/* GALLERY */
+
+.gallery{
+    background:#f7faff;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.gallery-item{
+    height:250px;
+    overflow:hidden;
+    border-radius:20px;
+    background:linear-gradient(135deg,#0757d9,#00a8ff);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    font-size:20px;
+    font-weight:700;
+}
+
+.gallery-item img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.gallery-item:hover img{
+    transform:scale(1.08);
+}
+
+/* CONTACT */
+
+.contact{
+    background:linear-gradient(135deg,#0b1630,#0757d9);
+    color:white;
+    text-align:center;
+}
+
+.contact .section-title h2,
+.contact .section-title p{
+    color:white;
+}
+
+.contact-box{
+    max-width:700px;
+    margin:auto;
+    display:grid;
+    gap:15px;
+}
+
+.contact-item{
+    padding:20px;
+    background:rgba(255,255,255,.1);
+    border-radius:15px;
+    backdrop-filter:blur(10px);
+}
+
+/* FOOTER */
+
+footer{
+    background:#071024;
+    color:#aebbd0;
+    text-align:center;
+    padding:28px;
+    font-size:14px;
+}
+
+/* ANIMATION */
+
+@keyframes fadeLeft{
+    from{
+        opacity:0;
+        transform:translateX(-40px);
+    }
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+
+@keyframes fadeRight{
+    from{
+        opacity:0;
+        transform:translateX(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+
+/* MOBILE */
+
+@media(max-width:950px){
+
+    nav ul{
+        display:none;
+    }
+
+    .hero-container{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+    .hero p{
+        margin:auto;
+    }
+
+    .buttons{
+        justify-content:center;
+    }
+
+    .hero-photo{
+        order:-1;
+    }
+
+    .photo-card{
+        width:320px;
+    }
+
+    .photo-card img{
+        height:420px;
+    }
+
+    .hero h1{
+        font-size:46px;
+    }
+
+    .about-grid{
+        grid-template-columns:1fr;
+    }
+
+    .stats-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .cards{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .gallery-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:600px){
+
+    header{
+        padding:15px 5%;
+    }
+
+    .logo{
+        font-size:19px;
+    }
+
+    .hero{
+        padding:120px 5% 60px;
+    }
+
+    section{
+        padding:70px 5%;
+    }
+
+    .hero h1{
+        font-size:38px;
+    }
+
+    .hero h2{
+        font-size:21px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .photo-card{
+        width:280px;
+    }
+
+    .photo-card img{
+        height:370px;
+    }
+
+    .section-title h2{
+        font-size:32px;
+    }
+
+    .stats-grid,
+    .cards,
+    .gallery-grid{
+        grid-template-columns:1fr;
+    }
+}
+</style>
 </head>
 
 <body>
 
 <header>
-    <nav>
-        <div class="logo">Bekzodbek Portfolio</div>
+<nav>
+    <div class="logo">Bekzodbek <span>Portfolio</span></div>
 
-        <ul>
-            <li><a href="#bosh">Bosh sahifa</a></li>
-            <li><a href="#men-haqimda">Men haqimda</a></li>
-            <li><a href="#statistika">Statistika</a></li>
-            <li><a href="#faoliyat">Faoliyat</a></li>
-            <li><a href="#aloqa">Bog‘lanish</a></li>
-        </ul>
-    </nav>
+    <ul>
+        <li><a href="#bosh">Bosh sahifa</a></li>
+        <li><a href="#men-haqimda">Men haqimda</a></li>
+        <li><a href="#statistika">Statistika</a></li>
+        <li><a href="#faoliyat">Faoliyat</a></li>
+        <li><a href="#yutuqlar">Yutuqlar</a></li>
+        <li><a href="#aloqa">Bog‘lanish</a></li>
+    </ul>
+</nav>
 </header>
 
+<!-- BOSH SAHIFA -->
+
 <section class="hero" id="bosh">
-    <div class="hero-content">
 
-        <h1>Umarov Bekzodbek</h1>
+<div class="hero-container">
 
-        <h2>Yoshlar bilan ishlash va ma’naviy-ma’rifiy faoliyat</h2>
+    <div class="hero-text">
+
+        <div class="badge">
+            ✨ Shaxsiy professional portfolio
+        </div>
+
+        <h1>
+            Umarov <span>Bekzodbek</span>
+        </h1>
+
+        <h2>
+            Yoshlar bilan ishlash, ma’naviyat va ma’rifat yo‘nalishidagi faoliyat
+        </h2>
 
         <p>
             Andijon davlat pedagogika institutida yoshlar bilan ishlash,
-            ma’naviyat va ma’rifat yo‘nalishidagi faoliyatimga bag‘ishlangan
-            shaxsiy portfolio sayt.
+            talabalarni qo‘llab-quvvatlash, ma’naviy-ma’rifiy tadbirlar,
+            sport va ijtimoiy loyihalarni tashkil etish bo‘yicha faoliyatim
+            haqida ma’lumotlar jamlangan shaxsiy portfolio.
         </p>
 
-        <a href="#men-haqimda" class="btn">
-            Men haqimda
-        </a>
+        <div class="buttons">
+            <a href="#men-haqimda" class="btn btn-primary">
+                Men haqimda →
+            </a>
+
+            <a href="#faoliyat" class="btn btn-light">
+                Faoliyatim
+            </a>
+        </div>
 
     </div>
+
+    <div class="hero-photo">
+
+        <div class="photo-card">
+
+            <img
+                src="a47137ba-38d7-447e-a201-a91153da922e.png"
+                alt="Umarov Bekzodbek"
+            >
+
+            <div class="photo-label">
+                Umarov Bekzodbek
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
 </section>
+
+
+<!-- MEN HAQIMDA -->
 
 <section class="about" id="men-haqimda">
 
-    <h2 class="section-title">Men haqimda</h2>
+<div class="container">
 
-    <div class="about-text">
+    <div class="section-title">
+        <h2>Men <span>haqimda</span></h2>
+        <p>Faoliyatim va professional yo‘nalishlarim</p>
+    </div>
 
-        <p>
-            Assalomu alaykum! Men Umarov Bekzodbek.
-            Ushbu saytda faoliyatim, amalga oshirgan loyihalarim,
-            tadbirlarim, sport musobaqalari, yoshlar bilan ishlash
-            jarayonlari va erishilgan natijalar haqida ma’lumotlar
-            jamlanadi.
-        </p>
+    <div class="about-grid">
+
+        <div class="about-box">
+
+            <h3>Faoliyatim</h3>
+
+            <p>
+                Yoshlar bilan ishlash, talabalar tashabbuslarini qo‘llab-quvvatlash,
+                sport musobaqalari, ma’naviy-ma’rifiy tadbirlar va turli
+                ijtimoiy loyihalarni tashkil etish hamda amalga oshirish
+                faoliyatimning asosiy yo‘nalishlaridan biridir.
+            </p>
+
+            <br>
+
+            <p>
+                Ushbu portfolio orqali amalga oshirilgan ishlar,
+                tadbirlar, natijalar va yutuqlarni yagona platformada
+                jamlash maqsad qilingan.
+            </p>
+
+        </div>
+
+        <div class="info-list">
+
+            <div class="info">
+                <strong>🏛 Ish joyi</strong>
+                <span>Andijon davlat pedagogika instituti</span>
+            </div>
+
+            <div class="info">
+                <strong>🎓 Ta’lim</strong>
+                <span>Magistratura</span>
+            </div>
+
+            <div class="info">
+                <strong>📌 Asosiy yo‘nalish</strong>
+                <span>Yoshlar bilan ishlash va ma’naviy-ma’rifiy faoliyat</span>
+            </div>
+
+            <div class="info">
+                <strong>💡 Maqsad</strong>
+                <span>Yoshlar salohiyatini rivojlantirish va tashabbuslarini qo‘llab-quvvatlash</span>
+            </div>
+
+        </div>
 
     </div>
 
+</div>
+
 </section>
 
-<section id="statistika">
 
-    <h2 class="section-title">Faoliyat statistikasi</h2>
+<!-- STATISTIKA -->
 
-    <div class="stats">
+<section class="stats" id="statistika">
 
-        <div class="stat-card">
+<div class="container">
+
+    <div class="section-title">
+
+        <h2>Faoliyat <span>statistikasi</span></h2>
+
+        <p>2025–2026-o‘quv yilidagi asosiy ko‘rsatkichlar</p>
+
+    </div>
+
+    <div class="stats-grid">
+
+        <div class="stat">
+            <h3>14 000+</h3>
+            <p>Umumiy ishtirok</p>
+        </div>
+
+        <div class="stat">
             <h3>100+</h3>
-            <p>Tadbirlar</p>
+            <p>Tadbir va loyiha</p>
         </div>
 
-        <div class="stat-card">
-            <h3>1000+</h3>
-            <p>Ishtirokchilar</p>
-        </div>
-
-        <div class="stat-card">
+        <div class="stat">
             <h3>17</h3>
-            <p>Medallar</p>
+            <p>Qo‘lga kiritilgan medallar</p>
         </div>
 
-        <div class="stat-card">
-            <h3>2025–26</h3>
-            <p>O‘quv yili</p>
+        <div class="stat">
+            <h3>5+</h3>
+            <p>Asosiy faoliyat yo‘nalishi</p>
         </div>
 
     </div>
 
+</div>
+
 </section>
 
-<section id="faoliyat">
 
-    <h2 class="section-title">Faoliyat yo‘nalishlari</h2>
+<!-- FAOLIYAT -->
+
+<section class="activity" id="faoliyat">
+
+<div class="container">
+
+    <div class="section-title">
+
+        <h2>Faoliyat <span>yo‘nalishlari</span></h2>
+
+        <p>Asosiy ish va loyihalar</p>
+
+    </div>
 
     <div class="cards">
 
         <div class="card">
-            <h3>🏆 Sport tadbirlari</h3>
+
+            <div class="icon">🏆</div>
+
+            <h3>Sport tadbirlari</h3>
+
             <p>
                 Talabalar o‘rtasida sport musobaqalari,
-                spartakiadalar va turli sport loyihalarini tashkil etish.
+                spartakiadalar, “Talabalar ligasi” va boshqa
+                sport loyihalarini tashkil etish.
             </p>
+
         </div>
 
         <div class="card">
-            <h3>🎓 Yoshlar bilan ishlash</h3>
+
+            <div class="icon">🎓</div>
+
+            <h3>Yoshlar bilan ishlash</h3>
+
             <p>
-                Talabalarning bo‘sh vaqtini mazmunli tashkil etish,
-                yoshlar loyihalari va tashabbuslarini qo‘llab-quvvatlash.
+                Talabalar bilan ishlash, ularning bo‘sh vaqtini
+                mazmunli tashkil etish va yoshlar tashabbuslarini
+                qo‘llab-quvvatlash.
             </p>
+
         </div>
 
         <div class="card">
-            <h3>📚 Ma’naviy-ma’rifiy ishlar</h3>
+
+            <div class="icon">📚</div>
+
+            <h3>Ma’naviy-ma’rifiy ishlar</h3>
+
             <p>
-                Ma’naviy-ma’rifiy tadbirlar, uchrashuvlar,
-                davra suhbatlari va targ‘ibot tadbirlarini tashkil etish.
+                Davra suhbatlari, uchrashuvlar, targ‘ibot tadbirlari
+                va ma’naviy-ma’rifiy loyihalarni amalga oshirish.
             </p>
+
         </div>
 
         <div class="card">
-            <h3>🏅 Tanlovlar</h3>
+
+            <div class="icon">🧠</div>
+
+            <h3>Intellektual loyihalar</h3>
+
             <p>
-                Talabalar o‘rtasida intellektual va ijodiy tanlovlarni
-                tashkil etish hamda ishtirokini ta’minlash.
+                Talabalar o‘rtasida intellektual tanlovlar,
+                viktorinalar va bilimga yo‘naltirilgan loyihalarni
+                tashkil etish.
             </p>
+
         </div>
 
         <div class="card">
-            <h3>📸 Fotoalbom</h3>
+
+            <div class="icon">🤝</div>
+
+            <h3>Uchrashuvlar</h3>
+
             <p>
-                Faoliyat davomida amalga oshirilgan tadbirlar va
-                loyihalardan foto va videolar.
+                Yoshlar, mutaxassislar, tashkilotlar va
+                jamoatchilik vakillari bilan uchrashuvlarni tashkil etish.
             </p>
+
         </div>
 
         <div class="card">
-            <h3>📄 Hisobotlar</h3>
+
+            <div class="icon">📄</div>
+
+            <h3>Hisobotlar</h3>
+
             <p>
-                Amalga oshirilgan ishlar, yillik hisobotlar va
-                faoliyat natijalari.
+                Amalga oshirilgan ishlar bo‘yicha hisobotlar,
+                statistik ma’lumotlar va tahliliy materiallarni jamlash.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- YUTUQLAR -->
+
+<section class="achievements" id="yutuqlar">
+
+<div class="container">
+
+    <div class="section-title">
+
+        <h2>Asosiy <span>yutuqlar</span></h2>
+
+        <p>Faoliyat davomida erishilgan natijalar</p>
+
+    </div>
+
+    <div class="achievement">
+
+        <div class="achievement-number">01</div>
+
+        <div>
+            <h3>Talabalar sport loyihalari</h3>
+            <p>
+                Institut talabalari o‘rtasida ko‘plab sport musobaqalari
+                tashkil etilib, respublika va hududiy bosqichlarda
+                sovrinli natijalarga erishildi.
             </p>
         </div>
 
     </div>
 
+    <div class="achievement">
+
+        <div class="achievement-number">02</div>
+
+        <div>
+            <h3>“Besh tashabbus olimpiadasi”</h3>
+            <p>
+                Talabalarni ommaviy sport, madaniyat va ijodiy
+                loyihalarga keng jalb etish ishlari amalga oshirildi.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="achievement">
+
+        <div class="achievement-number">03</div>
+
+        <div>
+            <h3>“Yangi O‘zbekiston talabalari Olimpiadasi”</h3>
+            <p>
+                Institut bosqichida talabalar ishtiroki ta’minlanib,
+                g‘oliblar asosida institut terma jamoasi shakllantirildi.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="achievement">
+
+        <div class="achievement-number">04</div>
+
+        <div>
+            <h3>Yoshlar bilan tizimli ishlash</h3>
+            <p>
+                Talabalarning ijtimoiy faolligini oshirishga qaratilgan
+                turli tadbirlar, loyihalar va tashabbuslar amalga oshirildi.
+            </p>
+        </div>
+
+    </div>
+
+</div>
+
 </section>
+
+
+<!-- FOTOALBOM -->
+
+<section class="gallery">
+
+<div class="container">
+
+    <div class="section-title">
+
+        <h2>Faoliyatdan <span>lavhalar</span></h2>
+
+        <p>Tez orada bu bo‘limga tadbirlar fotosuratlari joylashtiriladi</p>
+
+    </div>
+
+    <div class="gallery-grid">
+
+        <div class="gallery-item">
+            📸 Tadbirlar
+        </div>
+
+        <div class="gallery-item">
+            🏆 Sport musobaqalari
+        </div>
+
+        <div class="gallery-item">
+            🎓 Talabalar bilan
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- BOG‘LANISH -->
 
 <section class="contact" id="aloqa">
 
-    <h2 class="section-title">Bog‘lanish</h2>
+<div class="container">
 
-    <p>📍 Andijon davlat pedagogika instituti</p>
+    <div class="section-title">
 
-    <p>📧 Elektron pochta: Sizning emailingiz</p>
+        <h2>Bog‘lanish</h2>
 
-    <p>📱 Telefon: Sizning telefon raqamingiz</p>
+        <p>Men bilan aloqa qilish uchun</p>
+
+    </div>
+
+    <div class="contact-box">
+
+        <div class="contact-item">
+            📍 Andijon davlat pedagogika instituti
+        </div>
+
+        <div class="contact-item">
+            👤 Umarov Bekzodbek
+        </div>
+
+        <div class="contact-item">
+            📧 Elektron pochta — tez orada qo‘shiladi
+        </div>
+
+        <div class="contact-item">
+            📱 Telefon — tez orada qo‘shiladi
+        </div>
+
+    </div>
+
+</div>
 
 </section>
+
 
 <footer>
 
     <p>
-        © 2026 Umarov Bekzodbek. Barcha huquqlar himoyalangan.
+        © 2026 Umarov Bekzodbek. Shaxsiy portfolio.
     </p>
 
 </footer>
